@@ -62,7 +62,7 @@ RL_2025/
 
 ```bash
 # Clone repository
-git clone <your-repo-url>
+git clone https://github.com/MaithaAlhammadi98/RL-GHG-Consultant/
 cd RL_2025
 
 # Install dependencies
