@@ -1,0 +1,51 @@
+Question_Number,Question,Action,Answer,Score,Verdict,Method
+1,How do you conduct a GHG inventory?,financial_only,"Conducting a Greenhouse Gas (GHG) inventory involves several steps to accurately quantify and report an organization's or individual's GHG emissions. Here's a step-by-step guide:
+
+1. **Set boundaries and scope**: Define the geographic and organizational boundaries for the inventory. Identify the activities, processes, and sources that contribute to GHG emissions within these boundaries.
+
+2. **Gather data and information**: Collect relevant data and information from various sources, including:
+	*...",0.7,thumbs_up,Baseline (No Strategy)
+2,What is Scope 2 emissions?,legal_only,"Scope 2 emissions, also referred to as indirect emissions, are emissions that result from the consumption of purchased energy. In other words, these are the emissions associated with the generation of electricity or heat from off-site sources that are then purchased and used on-site by a company.",0.8,thumbs_up,Baseline (No Strategy)
+3,What are science-based targets?,broad,"Science-based targets are GHG emission reduction targets that are compared to a hypothetical, science-based target. This comparison is used to evaluate the ambition level of the undertaking's GHG emission reduction target, as proposed by the [Draft] Standard. The purpose of this comparison is to assist stakeholders in understanding the undertaking's effectiveness in ensuring compatibility with limiting global warming to 1.5 °C, as recommended by the Science-Based Targets initiative (SBTi).
+
+In s...",0.9,thumbs_up,Baseline (No Strategy)
+4,What are the reporting requirements for GHG emissions?,financial_only,"Reporting requirements for GHG emissions can vary depending on the jurisdiction, type of organization, and specific regulations in place. However, I'll provide a general overview of the typical requirements.
+
+**Global Requirements:**
+
+1. **Paris Agreement:** Countries participating in the Paris Agreement are required to submit Nationally Determined Contributions (NDCs) that include GHG emissions reporting.
+2. **United Nations Framework Convention on Climate Change (UNFCCC):** Countries must subm...",0.8,thumbs_up,Baseline (No Strategy)
+5,What is Scope 1 emissions?,broad,"Scope 1 emissions are the direct greenhouse gas (GHG) emissions that are owned or controlled by the reporting company. These emissions typically arise from the following sources:
+
+- Company-owned vehicles
+- Company-owned buildings and operations (e.g., heating, cooling, and lighting)
+- Company-owned landfills
+- Fuel combustion for company-owned vehicles, equipment, and heating systems
+
+In essence, Scope 1 emissions are the emissions that are directly within the control of the reporting company.",0.9,thumbs_up,Baseline (No Strategy)
+6,What is carbon accounting?,broad,"Carbon accounting, in the context provided, refers to the process of measuring, quantifying, and reporting the amount of greenhouse gas (GHG) emissions or removals associated with a company's operations, activities, or assets. This includes calculating emissions from sources such as energy consumption, transportation, and production processes, as well as quantifying removals through activities like carbon sequestration in forests or through the use of carbon capture and storage technologies.
+
+Ca...",0.9,thumbs_up,Baseline (No Strategy)
+7,What is Scope 3 emissions?,company_only,"Scope 3 emissions refer to the 15 categories of greenhouse gas (GHG) emissions in the value chain of a company, outside of its own direct operations (Scope 1) and those from the production of energy it purchases (Scope 2). These categories include, but are not limited to:
+
+1. Business travel
+2. Employee commutes
+3. Purchased goods and services
+4. Capital expenditures (e.g., construction and building)
+5. Supply chain emissions
+6. Transportation and distribution
+7. Waste generated in operations
+8....",0.9,thumbs_up,Baseline (No Strategy)
+8,"According to the Paris Agreement, what are the legal obligations for developed nations regarding emissions reductions?",legal_only,"According to the Paris Agreement, developed nations have a legal obligation to reduce their greenhouse gas emissions through Nationally Determined Contributions (NDCs). Article 4 of the Paris Agreement outlines the obligations of developed countries. 
+
+1. Developed countries are expected to take the lead in reducing greenhouse gas emissions, given their historical responsibility for the high levels of emissions.
+2. Developed countries are expected to limit the increase in the global average temp...",0.9,thumbs_up,Baseline (No Strategy)
+9,How do you calculate GHG emissions?,legal_only,"Calculating GHG (Greenhouse Gas) emissions involves combining calculated and estimated emissions from individual emission sources. There are two primary methods to obtain emission information:
+
+1. **Direct On-Site Measurement**: This involves directly measuring emissions from specific sources on-site.
+2. **Combination of Measured or Published Emissions**: This involves using a combination of measured data and published emission factors to estimate emissions.
+
+The calculation process typically in...",0.8,thumbs_up,Baseline (No Strategy)
+10,What are the GHG Protocol standards?,broad,"The GHG Protocol standards are the leading accounting standards for Greenhouse Gas (GHG) emissions. The GHG Protocol Corporate Standard, in particular, is a widely adopted framework that provides guidance and rules for calculating and reporting GHG emissions. It builds on the definitions and rules of the original GHG Protocol and has been developed through a multi-stakeholder dialogue.
+
+The GHG Protocol standards are considered robust, practical, and have been influenced by the expertise and exp...",0.8,thumbs_up,Baseline (No Strategy)

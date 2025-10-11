@@ -1,0 +1,51 @@
+Question_Number,Question,Action,Answer,Score,Verdict,Method
+1,What is Scope 1 emissions?,broad,"Scope 1 emissions refer to the direct greenhouse gas (GHG) emissions that occur from sources that are owned or controlled by the reporting company. This includes emissions from the following activities:
+
+1. Company-owned fuel combustion
+2. Company-owned industrial processes
+3. Company-owned fugitive emissions (e.g., methane leaks)
+4. Company-owned waste emissions
+
+Examples of Scope 1 emissions include emissions from a company's own:
+
+- Fuel combustion (e.g., natural gas, coal, oil)
+- Industrial ...",0.9,thumbs_up,Q-Learning
+2,What are the key challenges in measuring Scope 3 emissions?,broad,"Based on the provided context, the key challenges in measuring Scope 3 emissions include:
+
+1. **Data quality and availability**: Scope 3 emissions require data from various sources, including suppliers, customers, and other stakeholders, which can be difficult to obtain and may not be readily available.
+2. **Complexity of the value chain**: The value chain can be complex, with multiple levels of upstream and downstream activities, making it challenging to identify and quantify Scope 3 emissions....",0.9,thumbs_up,Q-Learning
+3,What is Scope 3 emissions?,broad,"Scope 3 emissions are an optional reporting category that allows for the treatment of all other indirect emissions. They are a consequence of the activities of the company, but occur from sources not owned or controlled by the company.",0.6,thumbs_down,Q-Learning
+4,How can companies reduce their Scope 3 emissions?,broad,"Companies can reduce their Scope 3 emissions by:
+
+1. **Conducting a rigorous GHG inventory**: This helps identify the most effective reduction opportunities and drive increased materials and energy efficiency.
+2. **Identifying and addressing indirect emissions**: Scope 3 emissions can be more cost-effective to reduce than direct emissions (Scope 1) and can be achieved through ""win-win"" options or by optimizing resource allocation.
+3. **Developing new products and services**: Companies can create...",0.9,thumbs_up,Q-Learning
+5,What are the reporting requirements for GHG emissions?,broad,"According to the provided context, a public GHG emissions report that is in accordance with the GHG Protocol Corporate Standard shall include the following information:
+
+1. **DESCRIPTION OF THE COMPANY AND INVENTORY BOUNDARY**
+   - An outline of the organizational boundaries chosen, including the chosen consolidation approach.
+   - An outline of the operational boundaries chosen, and if scope 3 is included, a list specifying which types of activities are covered.
+   - The reporting period covere...",1.0,thumbs_up,Q-Learning
+6,What is the difference between market-based and location-based accounting?,broad,"The difference between market-based and location-based accounting for Scope 2 GHG emissions lies in how the emissions are calculated.
+
+**Location-Based Method:**
+
+- This method applies an average grid emission factor for the given region of electricity generation.
+- It quantifies Scope 2 GHG emissions based on average energy generation emission factors for defined locations, such as local, subnational, or national boundaries.
+- This approach reflects the average emissions intensity of local or r...",0.9,thumbs_up,Q-Learning
+7,"According to the Paris Agreement, what are the legal obligations for developed nations regarding emissions reductions?",legal_only,"According to the Paris Agreement, developed nations have a legal obligation to reduce their greenhouse gas emissions. However, the specific language of the agreement does not use the term ""legal obligations"" but rather emphasizes the need for developed countries to take the lead in reducing their emissions.
+
+Article 2.1 of the Paris Agreement states that the ultimate goal is to limit global warming to well below 2°C and pursue efforts to limit it to 1.5°C above pre-industrial levels. Article 2.2...",0.9,thumbs_up,Q-Learning
+8,How do emission factors work in GHG calculations?,broad,"Emission factors are a crucial component in calculating Greenhouse Gas (GHG) emissions. They are used to convert activity data into GHG emissions data. In other words, emission factors help quantify the amount of GHG emissions associated with a specific activity or process.
+
+Here's a step-by-step explanation of how emission factors work in GHG calculations:
+
+1. **Activity Data**: Companies collect data on the activities or processes that result in GHG emissions, such as liters of fuel consumed o...",0.9,thumbs_up,Q-Learning
+9,What are carbon offsets and how do they work?,broad,"Carbon offsets are discrete reductions in greenhouse gas (GHG) emissions that are used to compensate for emissions elsewhere. They are calculated relative to a baseline that represents a hypothetical scenario of what emissions would have been in the absence of the mitigation project that generates the offsets.
+
+Here's a step-by-step explanation of how carbon offsets work:
+
+1. **Emissions reduction project**: A project is implemented to reduce GHG emissions, such as a reforestation project or a r...",0.9,thumbs_up,Q-Learning
+10,What is carbon accounting?,broad,"Carbon accounting refers to the process of measuring, recording, and reporting the amount of greenhouse gas (GHG) emissions and removals associated with an organization's activities, products, or services. It involves tracking the sources and sinks of GHG emissions, as well as the sequestration of carbon through various means such as reforestation, afforestation, and carbon capture and storage.
+
+In the context of corporate inventory accounting, carbon accounting involves calculating the GHG emis...",0.9,thumbs_up,Q-Learning

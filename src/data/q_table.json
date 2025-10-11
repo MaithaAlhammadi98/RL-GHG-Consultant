@@ -1,0 +1,104 @@
+{
+  "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"energy\", \"size\": \"large\", \"topic\": \"ghg\"}": {
+    "broad": 0.237,
+    "legal_only": 0.513155779351389,
+    "financial_only": 0.0,
+    "company_only": -0.22041
+  },
+  "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"energy\", \"size\": \"large\", \"topic\": \"fin\"}": {
+    "broad": 0.0,
+    "legal_only": 0.0,
+    "financial_only": 0.0,
+    "company_only": 0.657
+  },
+  "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"energy\", \"size\": \"large\", \"topic\": \"legal\"}": {
+    "broad": -0.3,
+    "legal_only": 1.2391500865320901,
+    "financial_only": -0.3,
+    "company_only": 0.0
+  },
+  "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"energy\", \"size\": \"large\", \"topic\": \"other\"}": {
+    "broad": -0.3,
+    "legal_only": -0.3,
+    "financial_only": 0.0,
+    "company_only": 0.0
+  },
+  "{\"len\": \"medium\", \"month\": \"2025-10\", \"sector\": \"energy\", \"size\": \"large\", \"topic\": \"ghg\"}": {
+    "broad": 0.51,
+    "legal_only": 0.0,
+    "financial_only": 0.0,
+    "company_only": 0.0
+  },
+  "{\"len\": \"medium\", \"month\": \"2025-10\", \"sector\": \"energy\", \"size\": \"large\", \"topic\": \"other\"}": {
+    "broad": 0.0,
+    "legal_only": -0.3,
+    "financial_only": 0.0,
+    "company_only": 0.0
+  },
+  "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"ghg\"}": {
+    "broad": 0.7214728774089354,
+    "legal_only": 0.5422611503861084,
+    "financial_only": 0.31487089982113453,
+    "company_only": -0.1426494613270041
+  },
+  "{\"len\": \"medium\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"other\"}": {
+    "broad": -0.07240487752909162,
+    "legal_only": 0.28219716608,
+    "financial_only": -0.20018399999999997,
+    "company_only": -0.23936799999999997
+  },
+  "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"other\"}": {
+    "broad": 0.5845748802184805,
+    "legal_only": -0.13644428202556988,
+    "financial_only": 0.21496764388856648,
+    "company_only": 0.1240454647625856
+  },
+  "{\"len\": \"medium\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"legal\"}": {
+    "broad": -0.14415837759999994,
+    "legal_only": 0.21534714895582252,
+    "financial_only": -0.11347360000000002,
+    "company_only": -0.14099999999999996
+  },
+  "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"legal\"}": {
+    "broad": -0.25204385261545065,
+    "legal_only": 0.038658832881813265,
+    "financial_only": -0.3483860405630835,
+    "company_only": -0.19560000000000002
+  },
+  "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"fin\"}": {
+    "broad": -0.20009253488639997,
+    "legal_only": -0.37133764892470444,
+    "financial_only": 0.199977007980544,
+    "company_only": -0.33732951911382564
+  },
+  "{\"len\": \"medium\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"ghg\"}": {
+    "broad": 0.5562652260457027,
+    "legal_only": -0.06972084070843264,
+    "financial_only": -0.18142095629959115,
+    "company_only": 0.11374253153559567
+  },
+  "{\"len\": \"medium\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"fin\"}": {
+    "broad": -0.011920000000000014,
+    "legal_only": -0.3625724644,
+    "financial_only": -0.191344,
+    "company_only": -0.11936156176228623
+  },
+  "{\"len\": \"long\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"ghg\"}": {
+    "broad": 0.435,
+    "legal_only": 0.0,
+    "financial_only": 0.0,
+    "company_only": 0.0
+  },
+  "{\"len\": \"long\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"fin\"}": {
+    "broad": 0.0,
+    "legal_only": 0.0,
+    "financial_only": 0.0,
+    "company_only": 0.153
+  },
+  "{\"len\": \"long\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"legal\"}": {
+    "broad": 0.09100000000000001,
+    "legal_only": 0.0,
+    "financial_only": 0.051000000000000004,
+    "company_only": 0.0
+  }
+}

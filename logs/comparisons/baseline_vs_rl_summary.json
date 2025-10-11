@@ -1,0 +1,8 @@
+{
+  "experiment": "Baseline vs RL",
+  "model": "llama-3.1-8b-instant",
+  "timestamp": "2025-10-11T12:57:50.588898",
+  "baseline_score": 0.9400000000000002,
+  "rl_score": 0.9600000000000002,
+  "improvement": 2.1276595744680864
+}

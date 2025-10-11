@@ -1,0 +1,38 @@
+Question_Number,Question,Action,Answer,Score,Verdict,Method
+1,What is carbon accounting?,financial_only,"Carbon accounting is the process of measuring, recording, and reporting the amount of greenhouse gas (GHG) emissions associated with an organization, product, or project. It involves tracking the sources and sinks of GHG emissions, such as carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O), and calculating the total emissions.
+
+Carbon accounting is often used to:
+
+1. Identify areas of high emissions and opportunities for reduction
+2. Meet regulatory requirements, such as reporting emis...",0.9,thumbs_up,PPO
+2,What is Scope 3 emissions?,broad,"Scope 3 emissions are an optional reporting category that allows for the treatment of all other indirect emissions. These emissions are a consequence of the activities of the company, but occur from sources not owned or controlled by the company.",0.6,thumbs_down,PPO
+3,What is Scope 1 emissions?,legal_only,"Scope 1 emissions refer to direct emissions that are a consequence of activities of the reporting company, and which result from sources owned or controlled by the reporting company itself.",0.8,thumbs_up,PPO
+4,What are carbon offsets and how do they work?,financial_only,"As a GHG emissions consultant, I'd be happy to explain what carbon offsets are and how they work.
+
+**What are carbon offsets?**
+
+Carbon offsets are a way to compensate for greenhouse gas (GHG) emissions that are difficult to reduce or eliminate, such as those from air travel, industrial processes, or other activities. They work by investing in projects that reduce GHG emissions elsewhere, often in developing countries or in sectors that are not yet subject to emissions regulations.
+
+**How do car...",1.0,thumbs_up,PPO
+5,What are science-based targets?,company_only,"Science-based targets are specific, measurable, and time-bound goals to reduce greenhouse gas (GHG) emissions, aligned with the level of decarbonization required to meet the Paris Agreement's goal of limiting global warming to well below 2°C (3.6°F) and pursuing efforts to limit it to 1.5°C (2.7°F) above pre-industrial levels.
+
+These targets are developed in collaboration with the Science-Based Targets initiative (SBTi), a global partnership that aims to promote the use of science-based targets ...",0.9,thumbs_up,PPO
+6,What is the Paris Agreement's temperature goal and why is it significant?,financial_only,"The Paris Agreement's temperature goal is to limit global warming to well below 2°C (3.6°F) above pre-industrial levels and pursue efforts to limit it to 1.5°C (2.7°F) above pre-industrial levels. This goal is significant for several reasons:
+
+1. **Mitigating climate change impacts**: Limiting global warming to 1.5°C or below can help avoid the most catastrophic and irreversible impacts of climate change, such as sea-level rise, extreme weather events, and loss of biodiversity.
+
+2. **Avoiding ti...",0.9,thumbs_up,PPO
+7,What are the GHG Protocol standards?,broad,"The GHG Protocol standards are the leading accounting standards for greenhouse gas (GHG) emissions, developed to provide a robust and practical framework for organizations to measure and report their GHG emissions. These standards are widely adopted and have been developed through a multi-stakeholder dialogue, incorporating the expertise and experience of numerous experts and practitioners.
+
+The GHG Protocol standards are based on the definitions and rules outlined in the GHG Protocol Corporate ...",0.9,thumbs_up,PPO
+8,What are the different scopes of emissions in the GHG Protocol?,company_only,"According to the provided context, the Greenhouse Gas (GHG) Protocol categorizes emissions into three scopes:
+
+1. **Scope 1 emissions**: These are direct greenhouse gas emissions from sources owned or controlled by the entity, such as emissions from fuel combustion, industrial processes, and other on-site sources.
+
+2. **Scope 2 emissions**: These are indirect greenhouse gas emissions from the generation of electricity, steam, heat, or cooling that is purchased or otherwise used by the entity.
+
+3...",0.9,thumbs_up,PPO
+9,What is Scope 2 emissions?,broad,"Scope 2 emissions include the emissions from the combustion of fuels to generate electricity, steam, heating, and cooling purchased and consumed by the reporting company.",0.7,thumbs_up,PPO
+10,What is the Paris Agreement?,company_only,"The Paris Agreement is not mentioned in the provided context. However, I can provide general information about the Paris Agreement.
+
+The Paris Agreement is an international agreement on climate change that was adopted by 196 parties at the 21st Conference of the Parties (COP 21) of the United Nations Framework Convention on Climate Change (UNFCCC) in Paris, France, in December 2015. The agreement aims to mitigate global warming by limiting the increase in the global average temperature to well b...",0.8,thumbs_up,PPO

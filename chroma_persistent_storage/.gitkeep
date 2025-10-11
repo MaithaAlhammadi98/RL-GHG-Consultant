@@ -1,0 +1,2 @@
+# This file ensures the chroma_persistent_storage directory is tracked by git
+# The actual database files are ignored but the directory structure is preserved
