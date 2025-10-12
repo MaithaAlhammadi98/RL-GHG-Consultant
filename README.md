@@ -6,7 +6,7 @@
 # 🌍 RL-GHG-Consultant
 > **Fine-Tuning Language Models through Reinforcement Learning for GHG Compliance**  
 > *By The Rewards Musketeers*
-Developed for the UTS 43008 Reinforcement Learning course, showcasing real-world RL for LLM optimization.
+
 
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -190,9 +190,15 @@ python three_bot_demo.py  # Opens at http://localhost:7860
 ## 👥 Team
 
 **The Rewards Musketeers**  
-Developed for the UTS Reinforcement Learning course, showcasing real-world RL for LLM optimization.
+Developed for the **UTS 43008 Reinforcement Learning** course under the supervision of **Dr. Nabin Sharma**.
 
----
+**Team Members:**
+- Maitha Alhammadi  
+- Emil Avanesov 
+- Camilo Uribe Guerra
+
+> This project demonstrates real-world Reinforcement Learning for LLM optimization applied to GHG compliance.
+
 
 ## 🙏 Acknowledgements
 
