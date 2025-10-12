@@ -159,10 +159,10 @@ python three_bot_demo.py  # Opens at http://localhost:7860
 
 ---
 
-## 📁 Project Structure
+<details>
+<summary><b>📁 Project Structure</b> (click to expand)</summary>
 
-```
-RL-GHG-Consultant/
+<pre><code>RL-GHG-Consultant/
 ├── src/backend/              # Core RL & RAG implementation
 │   ├── rl_agent.py          # Q-Learning agent
 │   ├── ppo_agent.py         # PPO agent
@@ -174,10 +174,13 @@ RL-GHG-Consultant/
 ├── complete_experiment.py   # 📊 Full experiment runner
 ├── docs/                    # 📚 Documentation
 │   ├── STUDY.md            # Complete technical guide
+│   ├── FUTURE_WORK.md      # Roadmap & improvements
 │   └── images/             # Visualizations
 ├── logs/                    # 📈 Experiment results
 └── requirements.txt         # Python dependencies
-```
+</code></pre>
+
+</details>
 
 ---
 
@@ -215,67 +218,20 @@ Developed for the UTS Reinforcement Learning course, showcasing real-world RL fo
 
 ---
 
-## 💡 Areas for Future Improvement
+## 💡 Future Work & Scaling Opportunities
 
-### **1. Enhanced State Representation**
+While our system demonstrates successful RL integration (+6-8% improvement), exciting opportunities exist for production deployment:
 
-**Current:** Low-dimensional manual feature engineering (topic, length, sector, size, month)
+### **Key Enhancement Areas**
 
-**Future Directions:**
-- **Semantic Embeddings**: Include question embedding vectors (e.g., from `sentence-transformers`) for richer state representation
-- **Historical Context**: Track dialogue history and previous action success rates per user session
-- **Entity Recognition**: Extract named entities (company names, regulations, dates) as additional state features
-- **Dynamic Features**: Include real-time metrics like retrieval latency, chunk availability per filter
+1. **Enhanced State Space** – Semantic embeddings, dialogue history, entity recognition
+2. **Expanded Action Space** – Hierarchical filters, multi-select combinations, continuous PPO actions
+3. **Production Deployment** – Online Q-Learning for customer support, batch PPO retraining, hybrid approaches
+4. **Advanced Metrics** – User engagement, retrieval efficiency, failure detection
 
-### **2. Scaling the Action Space**
+**📖 [Complete Future Work Document →](docs/FUTURE_WORK.md)**
 
-**Current:** Fixed 4-action space (`broad`, `legal_only`, `financial_only`, `company_only`)
-
-**Expansion Strategies:**
-
-**For Q-Learning:**
-- **Nested Filters**: Introduce hierarchical actions (e.g., `legal_eu_regulations`, `legal_us_epa`, `financial_esg_metrics`)
-- **Multi-Select Actions**: Allow combinations like `[legal + financial]` for cross-domain queries
-- **Confidence Thresholds**: Add actions with varying retrieval strictness (e.g., `top-3-strict`, `top-10-relaxed`)
-
-**For PPO (Advanced):**
-- **Continuous Action Space**: Train PPO to output a probability distribution over document types (e.g., 50% Legal, 30% Financial, 20% Technical)
-- **Weighted Retrieval**: Use action outputs as query weights for mixed-source retrieval, enabling nuanced, multi-faceted responses
-- **Parameterized Actions**: Learn continuous parameters like `temperature`, `top_k`, `similarity_threshold` for retrieval
-
-### **3. Production Deployment Strategy**
-
-**Current:** Side-by-side comparison demo with live Q-Learning updates
-
-**Deployment Considerations:**
-
-**Q-Learning in Production:**
-- ✅ **Strengths**: Fast online learning from user feedback (👍👎), interpretable Q-table, minimal compute
-- ⚠️ **Challenges**: Requires frequent user interactions, may converge slowly on rare states
-- **Recommendation**: Deploy for interactive applications where users provide immediate feedback (customer support, internal tools)
-
-**PPO in Production:**
-- ✅ **Strengths**: Superior performance (+8.4% vs baseline), stable learning, handles complex state spaces
-- ⚠️ **Challenges**: Requires batch training, not suitable for instant online updates
-- **Recommendation**: Deployment workflow:
-  1. **Initial Deployment**: Use pre-trained PPO model (from `complete_experiment.py`)
-  2. **Data Collection**: Log user interactions (questions, actions, feedback) in production
-  3. **Periodic Retraining**: Retrain PPO nightly/weekly on collected data using off-policy learning
-  4. **A/B Testing**: Shadow mode comparison (PPO vs baseline) before full rollout
-  5. **Model Versioning**: Maintain multiple PPO checkpoints for rollback safety
-
-**Hybrid Approach (Best of Both Worlds):**
-- Deploy PPO as primary agent for performance
-- Run Q-Learning in parallel for exploration and cold-start scenarios
-- Use Q-Learning feedback to identify distribution shifts for PPO retraining triggers
-
-### **4. Advanced Evaluation**
-
-**Future Metrics:**
-- **User Engagement**: Session length, follow-up question rate, document click-through
-- **Retrieval Efficiency**: Average chunks needed per satisfactory answer (lower is better)
-- **Diversity**: Coverage of different document types and topics over time
-- **Failure Analysis**: Automatic detection of low-confidence answers for human review queues
+Topics covered: Semantic embeddings, continuous action spaces, production architecture (Redis Q-tables, PPO retraining pipelines, A/B testing), multi-agent systems, meta-learning, human-in-the-loop active learning, and detailed implementation timelines.
 
 ---
 
