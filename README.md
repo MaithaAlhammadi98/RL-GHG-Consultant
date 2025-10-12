@@ -2,6 +2,10 @@
   <img src="docs/images/banner.jpg" width="100%" alt="RL-GHG-Consultant Banner">
 </p>
 
+<p align="center">
+  <img src="docs/images/demo_preview.gif" width="85%" alt="RL-GHG-Consultant Live Demo Preview">
+</p>
+
 # 🌍 RL-GHG-Consultant
 > **Fine-Tuning Language Models through Reinforcement Learning for GHG Compliance**  
 > *By The Rewards Musketeers*  
