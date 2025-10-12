@@ -9,9 +9,9 @@ This project demonstrates how **Reinforcement Learning (RL) improves LLM-based c
 ### **Key Results:**
 | Method | Avg Score | Thumbs Up Rate | Improvement |
 |--------|-----------|----------------|-------------|
-| **Baseline** (no RL) | 0.840 | 100.0% | - |
-| **Q-Learning** | 0.880 | 90.0% | +4.8% |
-| **PPO** | 0.840 | 90.0% | +0.0% |
+| **Baseline** (no RL) | 0.830 | 100.0% | - |
+| **Q-Learning** | 0.880 | 90.0% | +6.0% |
+| **PPO** | 0.900 | 100.0% | +8.4% |
 
 ## ️ Architecture
 
