@@ -80,7 +80,29 @@ unzip chroma_database_v1.0.zip
 python three_bot_demo.py  # Opens at http://localhost:7860
 ```
 
-> **Note:** To build the database from scratch instead (10-15 min), run `python populate_database.py`
+> **Note:** To build the database from scratch instead (10-15 min), run [`python src/backend/populate_database.py`](src/backend/populate_database.py)
+
+---
+
+## 📁 Project Structure
+
+```
+RL-GHG-Consultant/
+├── src/backend/              # Core RL & RAG implementation
+│   ├── rl_agent.py          # Q-Learning agent
+│   ├── ppo_agent.py         # PPO agent
+│   ├── rag_process.py       # RAG pipeline
+│   ├── reward_enhanced.py   # Multi-component reward
+│   ├── state.py             # State encoder
+│   └── populate_database.py # Database generation script
+├── three_bot_demo.py        # 🎮 Interactive Gradio demo
+├── complete_experiment.py   # 📊 Full experiment runner
+├── docs/                    # 📚 Documentation
+│   ├── STUDY.md            # Complete technical guide
+│   └── images/             # Visualizations
+├── logs/                    # 📈 Experiment results
+└── requirements.txt         # Python dependencies
+```
 
 ---
 
@@ -130,9 +152,22 @@ Developed for the UTS Reinforcement Learning course, showcasing real-world RL fo
 
 ## 📚 Documentation
 
+### **Guides & Reports**
 - 📖 **[Complete Technical Study Guide](docs/STUDY.md)** – Full architecture, design decisions, experiments (2,350+ lines)
 - 📊 **[Experiment Results](logs/comparisons/)** – Detailed CSV/JSON logs and visualizations  
 - 🎓 **[Project Report](REPORT.md)** – Academic report (to be uploaded)
+
+### **Main Scripts**
+- 🎮 **[`three_bot_demo.py`](three_bot_demo.py)** – Interactive Gradio demo (3 bots with live feedback)
+- 📊 **[`complete_experiment.py`](complete_experiment.py)** – Full experiment runner (train & evaluate all methods)
+- 🗄️ **[`src/backend/populate_database.py`](src/backend/populate_database.py)** – Database generation from PDFs
+
+### **Core RL Components**
+- 🎯 **[`src/backend/rl_agent.py`](src/backend/rl_agent.py)** – Q-Learning agent implementation
+- 🧠 **[`src/backend/ppo_agent.py`](src/backend/ppo_agent.py)** – PPO agent with actor-critic network
+- 🔍 **[`src/backend/rag_process.py`](src/backend/rag_process.py)** – RAG pipeline with ChromaDB
+- 🎁 **[`src/backend/reward_enhanced.py`](src/backend/reward_enhanced.py)** – Multi-component reward function
+- 🔢 **[`src/backend/state.py`](src/backend/state.py)** – State encoding for RL agents
 
 ---
 
