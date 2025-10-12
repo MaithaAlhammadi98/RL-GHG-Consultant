@@ -2,9 +2,6 @@
   <img src="docs/images/banner.jpg" width="100%" alt="RL-GHG-Consultant Banner">
 </p>
 
-<p align="center">
-  <img src="docs/images/demo_preview.gif" width="85%" alt="RL-GHG-Consultant Live Demo Preview">
-</p>
 
 # 🌍 RL-GHG-Consultant
 > **Fine-Tuning Language Models through Reinforcement Learning for GHG Compliance**  
@@ -13,6 +10,13 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey)]()
+
+
+
+<p align="center">
+  <img src="docs/images/demo_preview.gif" width="85%" alt="RL-GHG-Consultant Live Demo Preview">
+</p>
+
 
 ---
 
