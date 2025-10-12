@@ -87,5 +87,8 @@ logs/ppo/*.csv
 logs/comparisons/*.json
 logs/comparisons/*.png
 
-# Documentation (keep structure)
-docs/images/*.png
+# Documentation images (allow key visuals for README)
+!docs/images/DEMO.png
+!docs/images/DEMO_RESULTS.png
+!docs/images/banner.jpg
+!docs/images/complete_comparison_3methods.png

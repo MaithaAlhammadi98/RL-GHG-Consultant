@@ -1,209 +1,130 @@
-# 🌍 RL-Enhanced GHG Consultant Chatbot
+<p align="center">
+  <img src="docs/images/banner.jpg" width="100%" alt="RL-GHG-Consultant Banner">
+</p>
 
+# 🌍 RL-GHG-Consultant
 > **Fine-Tuning Language Models through Reinforcement Learning for GHG Compliance**  
-> *By The Rewards Musketeers*
+> *By The Rewards Musketeers*  
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Tested on Windows & macOS](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey)]()
-
-An intelligent GHG (Greenhouse Gas) consulting chatbot that uses **Reinforcement Learning** to optimize document retrieval in RAG (Retrieval-Augmented Generation) systems. We demonstrate that RL agents (Q-Learning & PPO) learn superior retrieval policies compared to fixed baseline strategies.
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey)]()
 
 ---
 
 ## 🚀 Overview
+An intelligent chatbot designed for Greenhouse Gas (GHG) compliance, powered by **Reinforcement Learning** within a **Retrieval-Augmented Generation (RAG)** framework.  
+Our RL agents (**Q-Learning** and **PPO**) dynamically choose optimal document filters—legal, financial, or technical—improving response quality by **6–8%**.
 
-Traditional RAG systems use static retrieval strategies. We improve this by training RL agents to **dynamically select optimal document filters** based on question characteristics. Our system learns which documents (legal, financial, technical) to retrieve for each query type, improving answer quality by **6-8%**.
-
-**Key Innovation:** Multi-component reward function evaluating answer quality, retrieval relevance, grounding, and policy diversity — enabling interpretable, continuously improving chatbot behavior.
+> **Innovation:** A multi-component reward function that evaluates answer quality, retrieval relevance, grounding, and policy diversity for continuous learning and interpretability.
 
 ---
 
 ## 🧠 Architecture
-
 ```
-User Question → State Encoder → RL Agent (Q-Learning/PPO) → Document Filter
-                                           ↓
-                                    RAG Process ↔ ChromaDB
-                                           ↓
-                                      LLM (Groq) → Answer
-                                           ↓
-                                   Reward Calculation ← Judge Evaluation
-                                           ↓
-                                   Update RL Agent
+User Question → RL Agent (Q-Learning / PPO) → Document Filter
+                            ↓
+                      RAG + ChromaDB
+                            ↓
+                     LLM (Groq) → Answer
+                            ↓
+                Reward Calculation ← LLM Judge
 ```
 
 ---
 
 ## 🎯 Results
 
-*(N=40 test questions, evaluated by GPT-4o-mini judge)*
+| Method | Avg Judge Score | Δ Improvement | 👍 Feedback |
+|--------|-----------------|---------------|-------------|
+| **Baseline** | 0.83 | — | 100% |
+| **Q-Learning** | 0.88 | +6% | 90% |
+| **PPO** | 0.90 | +8.4% | 100% |
 
-| Method | Avg Judge Score | Improvement | User Feedback |
-|--------|-----------------|-------------|---------------|
-| **Baseline** (no RL) | 0.830 | - | 100% 👍 |
-| **Q-Learning** | 0.880 | +6.0% | 90% 👍 |
-| **PPO** | 0.900 | +8.4% | 100% 👍 |
-
-![Results Comparison](docs/images/complete_comparison_3methods.png)
-
-→ **[Full Experiment Logs & Analysis](logs/comparisons/)**
+> *(Evaluated on 40 test questions using GPT-4o-mini as judge)*  
+> 🔍 [Full Experiment Logs & Visuals](docs/STUDY.md)
 
 ---
 
-## 🧩 Components
-
-Our system consists of:
-
-- **🔍 RAG Pipeline** – Retrieves relevant GHG documents using ChromaDB vector database
-- **🎮 Q-Learning Agent** – Tabular RL learning retrieval policies (α=0.3, γ=0.9, ε=0.2)
-- **🧠 PPO Agent** – Neural network-based policy optimization (clip=0.2, GAE λ=0.95)
-- **🎯 Multi-Component Reward** – Evaluates quality, relevance, grounding, diversity (50%+20%+15%+15%)
-- **⚖️ LLM-as-Judge** – GPT-4o-mini evaluates answers without ground truth access
-
-### Reward Function Summary:
+## 🧩 Reward Function
 ```python
-total_reward = 0.5 * judge_score      # Answer quality [0,1]
-             + 0.2 * retrieval_score  # Chunk relevance [0,1]
-             + 0.15 * action_score    # Policy diversity [0,1]
-             + 0.15 * grounding_score # Citation quality [0,1]
+total_reward = 0.5*judge_score + 0.2*retrieval_score \
+             + 0.15*action_score + 0.15*grounding_score
 ```
-
-→ **[Complete Technical Documentation](docs/STUDY.md)** (2,350+ lines)
 
 ---
 
 ## ⚙️ Quick Start
 
-### **1. Installation**
-
 ```bash
-# Clone repository
 git clone https://github.com/MaithaAlhammadi98/RL-GHG-Consultant.git
 cd RL-GHG-Consultant
-
-# Install dependencies (Python 3.10+ recommended)
 pip install -r requirements.txt
-```
-
-### **2. Setup Environment**
-
-```bash
-# Copy environment template and add your API keys
-cp .env.example .env
-# Edit .env with your GROQ_API_KEY and OPENAI_API_KEY
-```
-
-### **3. Populate Database**
-
-```bash
-# Generate ChromaDB vector store from PDF documents
+cp .env.example .env  # Add GROQ_API_KEY & OPENAI_API_KEY
 python populate_database.py
-```
-
-### **4. Run Interactive Demo**
-
-```bash
-# Launch Gradio interface at http://localhost:7860
 python three_bot_demo.py
 ```
 
+---
+
+## 🧩 Interactive RL Demo Interface
+
+<p align="center">
+  <img src="docs/images/DEMO.png" width="85%" alt="Interactive RL Demo Interface">
+</p>
+
 **Features:**
-- 🤖 Compare all 3 bots side-by-side
-- 👍👎 Train Q-Learning agent with live feedback
-- 📊 Watch Q-table update in real-time
+- 🤖 Compare Baseline, Q-Learning, and PPO bots side-by-side
+- 👍👎 Provide live feedback to train Q-Learning agent in real-time
+- 📊 Watch Q-table values update as the agent learns
+- 🎮 Interactive policy exploration with immediate visual feedback
 
-### **5. Run Full Experiment**
-
-```bash
-# Train & evaluate all methods, generate comparison plots
-python complete_experiment.py
-```
-
----
-
-## 📁 Project Structure
-
-```
-RL-GHG-Consultant/
-├── src/backend/           # Core RL & RAG implementation
-│   ├── rl_agent.py       # Q-Learning agent
-│   ├── ppo_agent.py      # PPO agent
-│   ├── rag_process.py    # RAG pipeline
-│   ├── reward_enhanced.py # Multi-component reward
-│   └── state.py          # State encoder
-├── three_bot_demo.py     # 🎮 Interactive Gradio demo
-├── complete_experiment.py # 📊 Full experiment runner
-├── populate_database.py  # 🗄️ Database setup
-├── docs/                 # 📚 Documentation
-│   ├── STUDY.md         # Complete technical guide
-│   └── images/          # Result visualizations
-├── logs/                 # 📈 Experiment results
-│   ├── baseline/
-│   ├── qlearning/
-│   ├── ppo/
-│   └── comparisons/
-├── requirements.txt
-├── Dockerfile
-└── REPORT.md            # 📄 Final project report (TBD)
-```
-
----
-
-## 🐳 Docker Support
-
-```bash
-# Build and run
-docker build -t rl-ghg-chatbot .
-docker run -p 7860:7860 --env-file .env rl-ghg-chatbot
-```
+> *To capture your own screenshot: Run `python three_bot_demo.py`, navigate to http://localhost:7860, ask a question, and use your OS screenshot tool. Save as `docs/images/DEMO.png`*
 
 ---
 
 ## 📊 Key Findings
 
-1. ✅ **Consistent RL Improvement** – Both agents outperform baseline (+6% Q-Learning, +8% PPO)
-2. 🧠 **Interpretable Policies** – Q-table shows learned state-action preferences
-3. 🔄 **Live Learning Works** – Interactive demo proves real-time policy updates
-4. 🎯 **Reward Design Matters** – Multi-component feedback enables nuanced learning
+* ✅ RL agents outperform static retrieval by +6–8%
+* 🧠 Q-tables show interpretable state-action patterns
+* 🔄 Live feedback improves policies in real-time
+* 🎯 Reward shaping enables nuanced, adaptive learning
+
+<p align="center">
+  <img src="docs/images/complete_comparison_3methods.png" width="85%" alt="RL Three-Bot Comparison Results">
+</p>
 
 ---
 
 ## 👥 Team
 
-**The Rewards Musketeers**
-
-This project was developed as part of an AI/RL course demonstrating practical applications of reinforcement learning to improve LLM-based systems.
-
----
-
-## 📚 Documentation
-
-- 📖 **[Technical Study Guide](docs/STUDY.md)** – Complete architecture, design decisions, training dynamics
-- 📊 **[Experiment Results](logs/comparisons/)** – Detailed CSV/JSON logs and visualizations
-- 🎓 **[Project Report](REPORT.md)** – Final academic report (to be uploaded)
-- 🔧 **[API Documentation](docs/README.md)** – Code references and usage guides
+**The Rewards Musketeers**  
+Developed for the UTS Reinforcement Learning course, showcasing real-world RL for LLM optimization.
 
 ---
 
 ## 🙏 Acknowledgements
 
-- **Groq** for fast LLM inference (Llama-3.1-8b-instant)
-- **OpenAI** for GPT-4o-mini judge evaluation
-- **ChromaDB** for vector database infrastructure
-- **Gradio** for interactive demo interface
+**Groq** • **OpenAI** • **ChromaDB** • **Gradio**
+
+---
+
+## 📚 Documentation
+
+- 📖 **[Complete Technical Study Guide](docs/STUDY.md)** – Full architecture, design decisions, experiments (2,350+ lines)
+- 📊 **[Experiment Results](logs/comparisons/)** – Detailed CSV/JSON logs and visualizations  
+- 🎓 **[Project Report](REPORT.md)** – Academic report (to be uploaded)
+- 📸 **[Image Assets Guide](docs/images/README.md)** – How to capture demo screenshots
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License — see [LICENSE](LICENSE)
 
 ---
 
 ## 📖 Citation
-
-If you use this project in your research, please cite:
 
 ```bibtex
 @software{rl_ghg_consultant_2025,
@@ -214,7 +135,7 @@ If you use this project in your research, please cite:
 }
 ```
 
-Or use GitHub's "Cite this repository" feature in the sidebar →
+Or use GitHub's "**Cite this repository**" button in the sidebar →
 
 ---
 
