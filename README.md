@@ -72,6 +72,9 @@ python three_bot_demo.py
 <p align="center">
   <img src="docs/images/DEMO.png" width="85%" alt="Interactive RL Demo Interface">
 </p>
+<p align="center">
+  <img src="docs/images/DEMO_RESULTS.png" width="85%" alt="Interactive RL Demo Interface">
+</p>
 
 **Features:**
 - 🤖 Compare Baseline, Q-Learning, and PPO bots side-by-side
@@ -79,7 +82,6 @@ python three_bot_demo.py
 - 📊 Watch Q-table values update as the agent learns
 - 🎮 Interactive policy exploration with immediate visual feedback
 
-> *To capture your own screenshot: Run `python three_bot_demo.py`, navigate to http://localhost:7860, ask a question, and use your OS screenshot tool. Save as `docs/images/DEMO.png`*
 
 ---
 
