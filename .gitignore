@@ -62,6 +62,10 @@ logs/*.txt
 *.tmp
 *.temp
 
+# Database archives
+*.zip
+chroma_database_v1.0.zip
+
 # API keys and secrets
 secrets.json
 config.json

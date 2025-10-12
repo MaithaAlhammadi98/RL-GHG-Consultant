@@ -89,6 +89,9 @@ python three_bot_demo.py  # Opens at http://localhost:7860
 <p align="center">
   <img src="docs/images/DEMO.png" width="85%" alt="Interactive RL Demo Interface">
 </p>
+<p align="center">
+  <img src="docs/images/DEMO_RESULTS.png" width="85%" alt="Interactive RL Demo Interface">
+</p>
 
 **Features:**
 - 🤖 Compare Baseline, Q-Learning, and PPO bots side-by-side
@@ -96,7 +99,6 @@ python three_bot_demo.py  # Opens at http://localhost:7860
 - 📊 Watch Q-table values update as the agent learns
 - 🎮 Interactive policy exploration with immediate visual feedback
 
-> *To capture your own screenshot: Run `python three_bot_demo.py`, navigate to http://localhost:7860, ask a question, and use your OS screenshot tool. Save as `docs/images/DEMO.png`*
 
 ---
 
@@ -131,28 +133,12 @@ Developed for the UTS Reinforcement Learning course, showcasing real-world RL fo
 - 📖 **[Complete Technical Study Guide](docs/STUDY.md)** – Full architecture, design decisions, experiments (2,350+ lines)
 - 📊 **[Experiment Results](logs/comparisons/)** – Detailed CSV/JSON logs and visualizations  
 - 🎓 **[Project Report](REPORT.md)** – Academic report (to be uploaded)
-- 📸 **[Image Assets Guide](docs/images/README.md)** – How to capture demo screenshots
 
 ---
 
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE)
-
----
-
-## 📖 Citation
-
-```bibtex
-@software{rl_ghg_consultant_2025,
-  title = {RL-Enhanced GHG Consultant Chatbot},
-  author = {The Rewards Musketeers},
-  year = {2025},
-  url = {https://github.com/MaithaAlhammadi98/RL-GHG-Consultant}
-}
-```
-
-Or use GitHub's "**Cite this repository**" button in the sidebar →
 
 ---
 
