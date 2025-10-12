@@ -165,15 +165,6 @@ This project was developed as part of an AI/RL course demonstrating practical ap
 
 ---
 
-## 📚 Documentation
-
-- 📖 **[Technical Study Guide](docs/STUDY.md)** – Complete architecture, design decisions, training dynamics
-- 📊 **[Experiment Results](logs/comparisons/)** – Detailed CSV/JSON logs and visualizations
-- 🎓 **[Project Report](REPORT.md)** – Final academic report (to be uploaded)
-- 🔧 **[API Documentation](docs/README.md)** – Code references and usage guides
-
----
-
 ## 🙏 Acknowledgements
 
 - **Groq** for fast LLM inference (Llama-3.1-8b-instant)
@@ -186,23 +177,6 @@ This project was developed as part of an AI/RL course demonstrating practical ap
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📖 Citation
-
-If you use this project in your research, please cite:
-
-```bibtex
-@software{rl_ghg_consultant_2025,
-  title = {RL-Enhanced GHG Consultant Chatbot},
-  author = {The Rewards Musketeers},
-  year = {2025},
-  url = {https://github.com/MaithaAlhammadi98/RL-GHG-Consultant}
-}
-```
-
-Or use GitHub's "Cite this repository" feature in the sidebar →
 
 ---
 
