@@ -17,6 +17,7 @@
   <img src="docs/images/demo_preview.gif" width="85%" alt="RL-GHG-Consultant Live Demo Preview">
 </p>
 
+<p align="center"><i>🎮 Live RL-Enhanced Chatbot Demo</i></p>
 
 ---
 
