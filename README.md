@@ -47,7 +47,42 @@ User Question → RL Agent (Q-Learning / PPO) → Document Filter
 
 ---
 
-## 🧩 Reward Function
+## 🧩 RL Components Deep Dive
+
+### **State Space Definition**
+
+Each user question is encoded into a structured state using [`src/backend/state.py`](src/backend/state.py):
+
+| Feature | Values | Purpose |
+|---------|--------|---------|
+| **Topic** | `legal`, `fin`, `ghg`, `other` | Question category via regex matching |
+| **Length** | `short` (<80 chars), `medium` (80-200), `long` (>200) | Question complexity proxy |
+| **Sector** | `energy`, `transport`, `finance`, `unknown` | Company context |
+| **Size** | `small`, `medium`, `large`, `unknown` | Company scale |
+| **Month** | `YYYY-MM` | Temporal context for seasonal patterns |
+
+**Example State:**
+```python
+{
+  "topic": "ghg",
+  "len": "medium", 
+  "sector": "energy",
+  "size": "large",
+  "month": "2025-10"
+}
+```
+
+This **low-dimensional, interpretable encoding** allows Q-Learning to build explicit state-action mappings while remaining human-readable. PPO's neural network can learn higher-order feature interactions from these base features.
+
+### **Action Space**
+
+- `broad` – Search all documents (default exploration)
+- `legal_only` – Filter for regulatory/compliance documents
+- `financial_only` – Filter for ESG/financial reports  
+- `company_only` – Filter for company-specific documents
+
+### **Reward Function**
+
 ```python
 total_reward = 0.5*judge_score + 0.2*retrieval_score \
              + 0.15*action_score + 0.15*grounding_score
@@ -169,6 +204,70 @@ Developed for the UTS Reinforcement Learning course, showcasing real-world RL fo
 - 🔍 **[`src/backend/rag_process.py`](src/backend/rag_process.py)** – RAG pipeline with ChromaDB
 - 🎁 **[`src/backend/reward_enhanced.py`](src/backend/reward_enhanced.py)** – Multi-component reward function
 - 🔢 **[`src/backend/state.py`](src/backend/state.py)** – State encoding for RL agents
+
+---
+
+## 💡 Areas for Future Improvement
+
+### **1. Enhanced State Representation**
+
+**Current:** Low-dimensional manual feature engineering (topic, length, sector, size, month)
+
+**Future Directions:**
+- **Semantic Embeddings**: Include question embedding vectors (e.g., from `sentence-transformers`) for richer state representation
+- **Historical Context**: Track dialogue history and previous action success rates per user session
+- **Entity Recognition**: Extract named entities (company names, regulations, dates) as additional state features
+- **Dynamic Features**: Include real-time metrics like retrieval latency, chunk availability per filter
+
+### **2. Scaling the Action Space**
+
+**Current:** Fixed 4-action space (`broad`, `legal_only`, `financial_only`, `company_only`)
+
+**Expansion Strategies:**
+
+**For Q-Learning:**
+- **Nested Filters**: Introduce hierarchical actions (e.g., `legal_eu_regulations`, `legal_us_epa`, `financial_esg_metrics`)
+- **Multi-Select Actions**: Allow combinations like `[legal + financial]` for cross-domain queries
+- **Confidence Thresholds**: Add actions with varying retrieval strictness (e.g., `top-3-strict`, `top-10-relaxed`)
+
+**For PPO (Advanced):**
+- **Continuous Action Space**: Train PPO to output a probability distribution over document types (e.g., 50% Legal, 30% Financial, 20% Technical)
+- **Weighted Retrieval**: Use action outputs as query weights for mixed-source retrieval, enabling nuanced, multi-faceted responses
+- **Parameterized Actions**: Learn continuous parameters like `temperature`, `top_k`, `similarity_threshold` for retrieval
+
+### **3. Production Deployment Strategy**
+
+**Current:** Side-by-side comparison demo with live Q-Learning updates
+
+**Deployment Considerations:**
+
+**Q-Learning in Production:**
+- ✅ **Strengths**: Fast online learning from user feedback (👍👎), interpretable Q-table, minimal compute
+- ⚠️ **Challenges**: Requires frequent user interactions, may converge slowly on rare states
+- **Recommendation**: Deploy for interactive applications where users provide immediate feedback (customer support, internal tools)
+
+**PPO in Production:**
+- ✅ **Strengths**: Superior performance (+8.4% vs baseline), stable learning, handles complex state spaces
+- ⚠️ **Challenges**: Requires batch training, not suitable for instant online updates
+- **Recommendation**: Deployment workflow:
+  1. **Initial Deployment**: Use pre-trained PPO model (from `complete_experiment.py`)
+  2. **Data Collection**: Log user interactions (questions, actions, feedback) in production
+  3. **Periodic Retraining**: Retrain PPO nightly/weekly on collected data using off-policy learning
+  4. **A/B Testing**: Shadow mode comparison (PPO vs baseline) before full rollout
+  5. **Model Versioning**: Maintain multiple PPO checkpoints for rollback safety
+
+**Hybrid Approach (Best of Both Worlds):**
+- Deploy PPO as primary agent for performance
+- Run Q-Learning in parallel for exploration and cold-start scenarios
+- Use Q-Learning feedback to identify distribution shifts for PPO retraining triggers
+
+### **4. Advanced Evaluation**
+
+**Future Metrics:**
+- **User Engagement**: Session length, follow-up question rate, document click-through
+- **Retrieval Efficiency**: Average chunks needed per satisfactory answer (lower is better)
+- **Diversity**: Coverage of different document types and topics over time
+- **Failure Analysis**: Automatic detection of low-confidence answers for human review queues
 
 ---
 
