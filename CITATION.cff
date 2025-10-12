@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "RL-Enhanced GHG Consultant Chatbot"
+abstract: "An intelligent GHG consulting chatbot that uses Reinforcement Learning to optimize document retrieval in RAG systems, demonstrating that Q-Learning and PPO agents can learn superior retrieval policies compared to fixed baseline strategies."
+authors:
+  - family-names: "The Rewards Musketeers"
+    affiliation: "AI/RL Course Project"
+repository-code: "https://github.com/MaithaAlhammadi98/RL-GHG-Consultant"
+keywords:
+  - reinforcement-learning
+  - retrieval-augmented-generation
+  - q-learning
+  - proximal-policy-optimization
+  - natural-language-processing
+  - large-language-models
+  - rag
+  - chatbot
+  - greenhouse-gas
+  - ghg-compliance
+license: MIT
+date-released: 2025-10-12
+version: "1.0.0"
+
