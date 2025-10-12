@@ -5,7 +5,9 @@
 
 # 🌍 RL-GHG-Consultant
 > **Fine-Tuning Language Models through Reinforcement Learning for GHG Compliance**  
-> *By The Rewards Musketeers*  
+> *By The Rewards Musketeers*
+Developed for the UTS 43008 Reinforcement Learning course, showcasing real-world RL for LLM optimization.
+
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
