@@ -57,13 +57,30 @@ total_reward = 0.5*judge_score + 0.2*retrieval_score \
 ## ⚙️ Quick Start
 
 ```bash
+# 1. Clone repository
 git clone https://github.com/MaithaAlhammadi98/RL-GHG-Consultant.git
 cd RL-GHG-Consultant
+
+# 2. Install dependencies
 pip install -r requirements.txt
-cp .env.example .env  # Add GROQ_API_KEY & OPENAI_API_KEY
-python populate_database.py
-python three_bot_demo.py
+
+# 3. Setup environment
+cp .env.example .env  # Add your GROQ_API_KEY & OPENAI_API_KEY
+
+# 4. Download pre-built database (133 MB - saves 10-15 minutes)
+# Windows (PowerShell)
+Invoke-WebRequest -Uri "https://huggingface.co/datasets/petitkitten/rl-ghg-consultant-database/resolve/main/chroma_database_v1.0.zip" -OutFile "chroma_database.zip"
+Expand-Archive -Path "chroma_database.zip" -DestinationPath "." -Force
+
+# macOS/Linux
+wget https://huggingface.co/datasets/petitkitten/rl-ghg-consultant-database/resolve/main/chroma_database_v1.0.zip
+unzip chroma_database_v1.0.zip
+
+# 5. Run interactive demo
+python three_bot_demo.py  # Opens at http://localhost:7860
 ```
+
+> **Note:** To build the database from scratch instead (10-15 min), run `python populate_database.py`
 
 ---
 
