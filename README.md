@@ -148,18 +148,6 @@ RL-GHG-Consultant/
 └── REPORT.md            # 📄 Final project report (TBD)
 ```
 
----
-
-## 🐳 Docker Support
-
-```bash
-# Build and run
-docker build -t rl-ghg-chatbot .
-docker run -p 7860:7860 --env-file .env rl-ghg-chatbot
-```
-
----
-
 ## 📊 Key Findings
 
 1. ✅ **Consistent RL Improvement** – Both agents outperform baseline (+6% Q-Learning, +8% PPO)
