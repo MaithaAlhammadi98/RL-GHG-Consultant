@@ -116,28 +116,12 @@ Developed for the UTS Reinforcement Learning course, showcasing real-world RL fo
 - 📖 **[Complete Technical Study Guide](docs/STUDY.md)** – Full architecture, design decisions, experiments (2,350+ lines)
 - 📊 **[Experiment Results](logs/comparisons/)** – Detailed CSV/JSON logs and visualizations  
 - 🎓 **[Project Report](REPORT.md)** – Academic report (to be uploaded)
-- 📸 **[Image Assets Guide](docs/images/README.md)** – How to capture demo screenshots
 
 ---
 
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE)
-
----
-
-## 📖 Citation
-
-```bibtex
-@software{rl_ghg_consultant_2025,
-  title = {RL-Enhanced GHG Consultant Chatbot},
-  author = {The Rewards Musketeers},
-  year = {2025},
-  url = {https://github.com/MaithaAlhammadi98/RL-GHG-Consultant}
-}
-```
-
-Or use GitHub's "**Cite this repository**" button in the sidebar →
 
 ---
 
