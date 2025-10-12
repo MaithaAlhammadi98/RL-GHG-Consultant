@@ -36,10 +36,10 @@
     "company_only": 0.0
   },
   "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"ghg\"}": {
-    "broad": 0.7214728774089354,
-    "legal_only": 0.5422611503861084,
-    "financial_only": 0.31487089982113453,
-    "company_only": -0.1426494613270041
+    "broad": 0.5940425358932213,
+    "legal_only": 0.5738089203088867,
+    "financial_only": 0.30951737588552614,
+    "company_only": -0.009119569061603272
   },
   "{\"len\": \"medium\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"other\"}": {
     "broad": -0.07240487752909162,
@@ -48,9 +48,9 @@
     "company_only": -0.23936799999999997
   },
   "{\"len\": \"short\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"other\"}": {
-    "broad": 0.5845748802184805,
-    "legal_only": -0.13644428202556988,
-    "financial_only": 0.21496764388856648,
+    "broad": 0.5494670967499917,
+    "legal_only": -0.029155425620455894,
+    "financial_only": 0.22937929208868255,
     "company_only": 0.1240454647625856
   },
   "{\"len\": \"medium\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"legal\"}": {
@@ -84,19 +84,19 @@
     "company_only": -0.11936156176228623
   },
   "{\"len\": \"long\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"ghg\"}": {
-    "broad": 0.435,
+    "broad": 0.483,
     "legal_only": 0.0,
     "financial_only": 0.0,
     "company_only": 0.0
   },
   "{\"len\": \"long\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"fin\"}": {
     "broad": 0.0,
-    "legal_only": 0.0,
+    "legal_only": 0.085,
     "financial_only": 0.0,
-    "company_only": 0.153
+    "company_only": 0.2074
   },
   "{\"len\": \"long\", \"month\": \"2025-10\", \"sector\": \"unknown\", \"size\": \"unknown\", \"topic\": \"legal\"}": {
-    "broad": 0.09100000000000001,
+    "broad": 0.1638,
     "legal_only": 0.0,
     "financial_only": 0.051000000000000004,
     "company_only": 0.0

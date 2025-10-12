@@ -12,15 +12,24 @@ import json
 import datetime
 import random
 import numpy as np
+import torch
 from pathlib import Path
 from typing import Dict, Any, List, Tuple, Optional
 from dataclasses import dataclass
+
+# Set random seeds for reproducibility
+RANDOM_SEED = int(os.getenv("RANDOM_SEED", 42))
+random.seed(RANDOM_SEED)
+np.random.seed(RANDOM_SEED)
+torch.manual_seed(RANDOM_SEED)
+if torch.cuda.is_available():
+    torch.cuda.manual_seed_all(RANDOM_SEED)
 
 SRC = (Path.cwd() / "src").resolve()
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-print(f" Setup complete")
+print(f" Setup complete (seed={RANDOM_SEED})")
 
 ### CELL 2: Load Backend ###
 from dotenv import load_dotenv
@@ -741,6 +750,7 @@ complete_results = {
     "experiment": "Baseline vs Q-Learning vs PPO",
     "model": "llama-3.1-8b-instant",
     "timestamp": datetime.datetime.now().isoformat(),
+    "random_seed": RANDOM_SEED,
     "baseline": {
         "avg_score": baseline_results["avg_score"],
         "success_rate": baseline_results["success_rate"]

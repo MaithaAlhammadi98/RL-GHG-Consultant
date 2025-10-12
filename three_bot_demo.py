@@ -408,8 +408,8 @@ with gr.Blocks(theme=gr.themes.Soft(), title="RL Chatbot Demo", css=custom_css) 
 
 # Launch
 if __name__ == "__main__":
-    print("🚀 Starting Three-Bot Interactive Demo...")
-    print("📝 Baseline | 🎓 Q-Learning (Interactive) | 🏆 PPO (Best)")
-    print("👍👎 Click feedback buttons to train Q-Learning bot LIVE!")
+    print("Starting Three-Bot Interactive Demo...")
+    print("Baseline | Q-Learning (Interactive) | PPO (Best)")
+    print("Click feedback buttons to train Q-Learning bot LIVE!")
     demo.launch(share=False, server_port=7860)
 

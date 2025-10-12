@@ -1,23 +1,23 @@
 {
   "experiment": "Baseline vs Q-Learning vs PPO",
   "model": "llama-3.1-8b-instant",
-  "timestamp": "2025-10-12T09:39:59.680168",
+  "timestamp": "2025-10-12T10:59:08.010102",
   "baseline": {
-    "avg_score": 0.8400000000000002,
+    "avg_score": 0.8300000000000001,
     "success_rate": 100.0
   },
   "qlearning": {
     "avg_score": 0.8800000000000001,
     "success_rate": 90.0,
-    "improvement": 4.761904761904752
+    "improvement": 6.024096385542173
   },
   "ppo": {
-    "avg_score": 0.8400000000000002,
-    "success_rate": 90.0,
-    "improvement": 0.0
+    "avg_score": 0.9000000000000001,
+    "success_rate": 100.0,
+    "improvement": 8.433734939759043
   },
   "training_rounds": {
-    "qlearning": 20,
-    "ppo": 20
+    "qlearning": 30,
+    "ppo": 30
   }
 }
