@@ -21,6 +21,7 @@ Our RL agents (**Q-Learning** and **PPO**) dynamically choose optimal document f
 ---
 
 ## 🧠 Architecture
+
 ```
 User Question → RL Agent (Q-Learning / PPO) → Document Filter
                             ↓
@@ -84,28 +85,6 @@ python three_bot_demo.py  # Opens at http://localhost:7860
 
 ---
 
-## 📁 Project Structure
-
-```
-RL-GHG-Consultant/
-├── src/backend/              # Core RL & RAG implementation
-│   ├── rl_agent.py          # Q-Learning agent
-│   ├── ppo_agent.py         # PPO agent
-│   ├── rag_process.py       # RAG pipeline
-│   ├── reward_enhanced.py   # Multi-component reward
-│   ├── state.py             # State encoder
-│   └── populate_database.py # Database generation script
-├── three_bot_demo.py        # 🎮 Interactive Gradio demo
-├── complete_experiment.py   # 📊 Full experiment runner
-├── docs/                    # 📚 Documentation
-│   ├── STUDY.md            # Complete technical guide
-│   └── images/             # Visualizations
-├── logs/                    # 📈 Experiment results
-└── requirements.txt         # Python dependencies
-```
-
----
-
 ## 🧩 Interactive RL Demo Interface
 
 <p align="center">
@@ -134,6 +113,28 @@ RL-GHG-Consultant/
 <p align="center">
   <img src="docs/images/complete_comparison_3methods.png" width="85%" alt="RL Three-Bot Comparison Results">
 </p>
+
+---
+
+## 📁 Project Structure
+
+```
+RL-GHG-Consultant/
+├── src/backend/              # Core RL & RAG implementation
+│   ├── rl_agent.py          # Q-Learning agent
+│   ├── ppo_agent.py         # PPO agent
+│   ├── rag_process.py       # RAG pipeline
+│   ├── reward_enhanced.py   # Multi-component reward
+│   ├── state.py             # State encoder
+│   └── populate_database.py # Database generation script
+├── three_bot_demo.py        # 🎮 Interactive Gradio demo
+├── complete_experiment.py   # 📊 Full experiment runner
+├── docs/                    # 📚 Documentation
+│   ├── STUDY.md            # Complete technical guide
+│   └── images/             # Visualizations
+├── logs/                    # 📈 Experiment results
+└── requirements.txt         # Python dependencies
+```
 
 ---
 
