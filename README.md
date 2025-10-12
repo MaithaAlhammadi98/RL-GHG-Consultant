@@ -161,7 +161,7 @@ python three_bot_demo.py  # Opens at http://localhost:7860
 ---
 
 <details>
-<summary><b>📁 Project Structure</b> (click to expand)</summary>
+<summary><b>📁 Github Structure</b> (click to expand)</summary>
 
 <pre><code>RL-GHG-Consultant/
 ├── src/backend/              # Core RL & RAG implementation
