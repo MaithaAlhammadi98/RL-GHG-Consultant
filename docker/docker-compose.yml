@@ -18,12 +18,12 @@ services:
       - GROQ_API_KEY=${GROQ_API_KEY}
       - RANDOM_SEED=${RANDOM_SEED:-42}
     volumes:
-      # Persistent data storage
-      - ./logs:/app/logs
-      - ./src/data:/app/src/data
-      - ./chroma_persistent_storage:/app/chroma_persistent_storage
+      # Persistent data storage (relative to docker folder)
+      - ../logs:/app/logs
+      - ../src/data:/app/src/data
+      - ../chroma_persistent_storage:/app/chroma_persistent_storage
       # Q-table persistence
-      - ./src/data/q_table.json:/app/src/data/q_table.json
+      - ../src/data/q_table.json:/app/src/data/q_table.json
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:7860/"]

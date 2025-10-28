@@ -10,8 +10,8 @@ set -e  # Exit on any error
 echo "🚀 Starting RL-Enhanced GHG Consultant..."
 echo "=========================================="
 
-# Check if .env file exists
-if [ ! -f .env ]; then
+# Check if .env file exists (in parent directory)
+if [ ! -f ../.env ]; then
     echo "❌ .env file not found!"
     echo "📝 Please copy env.example to .env and add your API keys:"
     echo "   cp env.example .env"
@@ -26,11 +26,11 @@ if ! docker info > /dev/null 2>&1; then
     exit 1
 fi
 
-# Create necessary directories
+# Create necessary directories (in parent directory)
 echo "📁 Creating directories..."
-mkdir -p logs/baseline logs/qlearning logs/ppo logs/comparisons
-mkdir -p src/data
-mkdir -p chroma_persistent_storage
+mkdir -p ../logs/baseline ../logs/qlearning ../logs/ppo ../logs/comparisons
+mkdir -p ../src/data
+mkdir -p ../chroma_persistent_storage
 
 # Build and start the application
 echo "🔨 Building Docker image..."

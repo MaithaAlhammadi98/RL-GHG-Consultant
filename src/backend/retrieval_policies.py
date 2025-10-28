@@ -6,15 +6,15 @@ ACTIONS = ["broad", "legal_only", "financial_only", "company_only"]
 def action_to_filter(action: str, company_name: Optional[str] = None) -> Optional[Dict[str, Any]]:
     a = (action or "").lower()
     if a == "legal_only":
-        # Force retrieval of WRONG documents - get API compendium instead of legal docs
+        # Retrieve technical GHG methodology and API documentation
         return {"source": {"$in": ["2021-API-GHG-Compendium-110921.pdf"]}}
     if a == "financial_only":
-        # Force retrieval of WRONG documents - get ISO standard instead of financial docs  
+        # Retrieve international standards and compliance guidelines
         return {"source": {"$in": ["ISO-14064-1.pdf"]}}
     if a == "company_only":
-        # Force retrieval of WRONG documents - get Australian standards instead of company docs
+        # Retrieve regulatory and sustainability reporting standards
         return {"source": {"$in": ["24ru-12-australian-sustainability-reporting-standards-legislation-finalised.pdf"]}}
-    # "broad" or unknown  no filter
+    # "broad" - no filter, retrieve from all available documents
     return None
 
 

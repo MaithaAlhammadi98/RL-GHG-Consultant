@@ -27,7 +27,7 @@ WORKDIR /app
 FROM base as dependencies
 
 # Copy requirements first for better caching
-COPY requirements.txt .
+COPY ../requirements.txt .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade pip && \
@@ -39,8 +39,8 @@ RUN python -c "import nltk; nltk.download('punkt')"
 # Stage 3: Application setup
 FROM dependencies as app
 
-# Copy application code
-COPY . .
+# Copy application code from parent directory
+COPY ../ .
 
 # Create necessary directories
 RUN mkdir -p logs/baseline logs/qlearning logs/ppo logs/comparisons src/data

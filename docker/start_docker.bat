@@ -8,8 +8,8 @@ REM ============================================================================
 echo 🚀 Starting RL-Enhanced GHG Consultant...
 echo ==========================================
 
-REM Check if .env file exists
-if not exist .env (
+REM Check if .env file exists (in parent directory)
+if not exist ..\.env (
     echo ❌ .env file not found!
     echo 📝 Please copy env.example to .env and add your API keys:
     echo    copy env.example .env
@@ -27,15 +27,15 @@ if errorlevel 1 (
     exit /b 1
 )
 
-REM Create necessary directories
+REM Create necessary directories (in parent directory)
 echo 📁 Creating directories...
-if not exist logs mkdir logs
-if not exist logs\baseline mkdir logs\baseline
-if not exist logs\qlearning mkdir logs\qlearning
-if not exist logs\ppo mkdir logs\ppo
-if not exist logs\comparisons mkdir logs\comparisons
-if not exist src\data mkdir src\data
-if not exist chroma_persistent_storage mkdir chroma_persistent_storage
+if not exist ..\logs mkdir ..\logs
+if not exist ..\logs\baseline mkdir ..\logs\baseline
+if not exist ..\logs\qlearning mkdir ..\logs\qlearning
+if not exist ..\logs\ppo mkdir ..\logs\ppo
+if not exist ..\logs\comparisons mkdir ..\logs\comparisons
+if not exist ..\src\data mkdir ..\src\data
+if not exist ..\chroma_persistent_storage mkdir ..\chroma_persistent_storage
 
 REM Build and start the application
 echo 🔨 Building Docker image...
