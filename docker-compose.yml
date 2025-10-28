@@ -1,0 +1,45 @@
+# ============================================================================
+# RL-Enhanced GHG Consultant - Docker Compose
+# ============================================================================
+# Easy deployment with persistent data and environment configuration
+# ============================================================================
+
+version: '3.8'
+
+services:
+  rl-ghg-consultant:
+    build: .
+    container_name: rl-ghg-consultant
+    ports:
+      - "7860:7860"  # Gradio web interface
+    environment:
+      # API Keys (set these in .env file)
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - RANDOM_SEED=${RANDOM_SEED:-42}
+    volumes:
+      # Persistent data storage
+      - ./logs:/app/logs
+      - ./src/data:/app/src/data
+      - ./chroma_persistent_storage:/app/chroma_persistent_storage
+      # Q-table persistence
+      - ./src/data/q_table.json:/app/src/data/q_table.json
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7860/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - rl-network
+
+networks:
+  rl-network:
+    driver: bridge
+
+volumes:
+  # Named volumes for persistent data
+  logs_data:
+  chroma_data:
+  q_table_data:

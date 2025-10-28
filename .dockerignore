@@ -1,0 +1,76 @@
+# ============================================================================
+# RL-Enhanced GHG Consultant - Docker Ignore
+# ============================================================================
+# Files and directories to exclude from Docker build context
+# ============================================================================
+
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs (will be created in container)
+logs/
+*.log
+
+# Environment files (sensitive)
+.env
+.env.local
+.env.production
+
+# Documentation
+README.md
+README_DOCKER.md
+docs/
+*.md
+
+# Jupyter notebooks
+*.ipynb
+notebooks/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Scripts
+start_docker.sh
+start_docker.bat
+
+# Large data files (if any)
+*.zip
+*.tar.gz
+*.rar
+
+# Node modules (if any)
+node_modules/
+
+# Build artifacts
+build/
+dist/

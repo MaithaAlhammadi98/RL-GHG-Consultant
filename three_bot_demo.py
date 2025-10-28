@@ -411,5 +411,19 @@ if __name__ == "__main__":
     print("Starting Three-Bot Interactive Demo...")
     print("Baseline | Q-Learning (Interactive) | PPO (Best)")
     print("Click feedback buttons to train Q-Learning bot LIVE!")
-    demo.launch(share=False, server_port=7860)
+    
+    # Get configuration from environment
+    server_port = int(os.getenv("GRADIO_SERVER_PORT", 7860))
+    server_name = os.getenv("GRADIO_SERVER_NAME", "0.0.0.0")
+    
+    print(f"🌐 Starting server on {server_name}:{server_port}")
+    print(f"🔗 Access the app at: http://localhost:{server_port}")
+    
+    demo.launch(
+        share=False, 
+        server_port=server_port,
+        server_name=server_name,
+        show_error=True,
+        quiet=False
+    )
 
