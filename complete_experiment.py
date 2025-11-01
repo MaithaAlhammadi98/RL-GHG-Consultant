@@ -318,7 +318,7 @@ def test_baseline(rag, questions, num_tests=50):
 print(" Baseline function ready")
 
 ### CELL 8: Q-Learning Training Function ###
-def train_q_learning(rag, questions, rounds=50):
+def train_q_learning(rag, questions, rounds=500):
     """Train Q-Learning agent"""
     print(f"\n{'='*70}\n TRAINING Q-LEARNING\n{'='*70}\n")
     
@@ -367,7 +367,7 @@ def train_q_learning(rag, questions, rounds=50):
 print(" Q-Learning training function ready")
 
 ### CELL 9: PPO Training Function ###
-def train_ppo(rag, questions, rounds=50):
+def train_ppo(rag, questions, rounds=8000):
     """Train PPO agent"""
     print(f"\n{'='*70}\n TRAINING PPO\n{'='*70}\n")
     
@@ -722,11 +722,11 @@ baseline_results = test_baseline(baseline_rag, TRAINING_QUESTIONS, num_tests=10)
 
 # STEP 2: Train Q-Learning
 print("\nSTEP 2: Training Q-Learning Agent (Full Answers)")
-q_agent, q_training_log = train_q_learning(rl_rag, TRAINING_QUESTIONS, rounds=20)
+q_agent, q_training_log = train_q_learning(rl_rag, TRAINING_QUESTIONS, rounds=500)
 
 # STEP 3: Train PPO
 print("\nSTEP 3: Training PPO Agent (Full Answers)")
-ppo_agent, ppo_training_log = train_ppo(rl_rag, TRAINING_QUESTIONS, rounds=20)
+ppo_agent, ppo_training_log = train_ppo(rl_rag, TRAINING_QUESTIONS, rounds=8000)
 
 # STEP 4: Test Q-Learning
 print("\nSTEP 4: Testing Q-Learning Agent (Full Answers)")
