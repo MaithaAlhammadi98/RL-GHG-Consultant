@@ -211,7 +211,6 @@ Developed for the **UTS 43008 Reinforcement Learning** course under the supervis
 ### **Guides & Reports**
 - 📖 **[Complete Technical Study Guide](docs/STUDY.md)** – Full architecture, design decisions, experiments (2,350+ lines)
 - 📊 **[Experiment Results](logs/comparisons/)** – Detailed CSV/JSON logs and visualizations  
-- 🎓 **[Project Report](REPORT.md)** – Academic report (to be uploaded)
 
 ### **Main Scripts**
 - 🎮 **[`three_bot_demo.py`](three_bot_demo.py)** – Interactive Gradio demo (3 bots with live feedback)
